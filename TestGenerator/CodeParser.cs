@@ -16,7 +16,11 @@ namespace TestGenerator
             List<ClassData> classes = new List<ClassData>();
             foreach (var classDeclaration in tree.DescendantNodes().OfType<ClassDeclarationSyntax>())
             {
-                classes.Add(GetClassData(classDeclaration));
+                ClassData data = GetClassData(classDeclaration);
+                if (data.Methods.Count != 0)
+                {
+                    classes.Add(data);
+                }
             }
 
             return new FileData(classes);
