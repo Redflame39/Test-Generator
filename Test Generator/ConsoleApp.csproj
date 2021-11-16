@@ -6,4 +6,8 @@
     <RootNamespace>ConsoleApp</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\TestGenerator\TestGenerator.csproj" />
+  </ItemGroup>
+
 </Project>
