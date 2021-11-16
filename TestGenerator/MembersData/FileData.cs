@@ -12,7 +12,7 @@ namespace TestGenerator.MembersData
 
         public FileData(List<ClassData> classes)
         {
-            Classes.AddRange(classes);
+            Classes = classes;
         }
     }
 }

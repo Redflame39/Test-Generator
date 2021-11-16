@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31321.278
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp", "Test Generator\ConsoleApp.csproj", "{3585F64A-C137-49A6-9B99-DFAB26473B70}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp", "Test Generator\ConsoleApp.csproj", "{3585F64A-C137-49A6-9B99-DFAB26473B70}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestGenerator", "TestGenerator\TestGenerator.csproj", "{72A80A8D-8AF5-42A0-880C-5607E3610333}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestGenerator", "TestGenerator\TestGenerator.csproj", "{72A80A8D-8AF5-42A0-880C-5607E3610333}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeneratedTests", "GeneratedTests\GeneratedTests.csproj", "{F7B6A8F4-B7C7-4822-AF5B-0BDC7834BE2D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{72A80A8D-8AF5-42A0-880C-5607E3610333}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{72A80A8D-8AF5-42A0-880C-5607E3610333}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{72A80A8D-8AF5-42A0-880C-5607E3610333}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7B6A8F4-B7C7-4822-AF5B-0BDC7834BE2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7B6A8F4-B7C7-4822-AF5B-0BDC7834BE2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7B6A8F4-B7C7-4822-AF5B-0BDC7834BE2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7B6A8F4-B7C7-4822-AF5B-0BDC7834BE2D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

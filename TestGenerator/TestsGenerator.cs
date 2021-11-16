@@ -29,7 +29,7 @@ namespace TestGenerator
                 var compilationUnit = SyntaxFactory.CompilationUnit()
                     .AddUsings(SyntaxFactory.UsingDirective(SyntaxFactory.ParseName("System")))
                     .AddUsings(SyntaxFactory.UsingDirective(SyntaxFactory.ParseName("NUnit.Framework")))
-                    .AddUsings(SyntaxFactory.UsingDirective(SyntaxFactory.ParseName("MainPart.Files")))
+                    .AddUsings(SyntaxFactory.UsingDirective(SyntaxFactory.ParseName("ConsoleApp.Files")))
                     .AddUsings(SyntaxFactory.UsingDirective(SyntaxFactory.ParseName("Moq")))
                     .AddUsings(SyntaxFactory.UsingDirective(SyntaxFactory.ParseName("System.Collections.Generic")))
                     .AddMembers(classDeclaration);

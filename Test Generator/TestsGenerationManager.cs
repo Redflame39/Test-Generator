@@ -11,9 +11,9 @@ namespace ConsoleApp
 {
     public class TestsGenerationManager
     {
-        public Task Generate(IEnumerable<string> files, string pathToGenerated)
+        public Task Generate(IEnumerable<string> files, string pathToGenerated, int maxThreads)
         {
-            var execOptions = new ExecutionDataflowBlockOptions { MaxDegreeOfParallelism = files.Count() };
+            var execOptions = new ExecutionDataflowBlockOptions { MaxDegreeOfParallelism = maxThreads };
             var linkOptions = new DataflowLinkOptions { PropagateCompletion = true };
             var downloadStringBlock = new TransformBlock<string, string>
             (
@@ -32,7 +32,6 @@ namespace ConsoleApp
                 {
                     CodeParser parser = new CodeParser();
                     var fileInfo = await Task.Run(() => parser.GetFileData(sourceCode));
-                    Console.WriteLine("zzz");
                     TestsGenerator generator = new TestsGenerator();
                     return await Task.Run(() => generator.GenerateTests(fileInfo));
                 },
@@ -42,10 +41,9 @@ namespace ConsoleApp
             (
                 async fileNameCodePair =>
                 {
-                    Console.WriteLine("ohoho");
                     using (var writer = new StreamWriter(pathToGenerated + '\\' + fileNameCodePair.Key + ".cs"))
                     {
-                        Console.WriteLine("hhh" + fileNameCodePair.Key);
+                        Console.WriteLine(fileNameCodePair.Key);
                         await writer.WriteAsync(fileNameCodePair.Value);
                     }
                 },

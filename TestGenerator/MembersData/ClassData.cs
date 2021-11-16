@@ -17,8 +17,8 @@ namespace TestGenerator.MembersData
         public ClassData(string name, List<ConstructorData> constructors, List<MethodData> methods)
         {
             Name = name;
-            Constructors.AddRange(constructors);
-            Methods.AddRange(methods);
+            Constructors = constructors;
+            Methods = methods;
         }
     }
 }
